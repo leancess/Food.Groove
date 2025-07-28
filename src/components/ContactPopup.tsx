@@ -29,6 +29,12 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose }) => {
     }));
   };
 
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -71,7 +77,10 @@ Aguardo retorno para agendar uma reunião!`;
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+    <div 
+      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+      onClick={handleOverlayClick}
+    >
       <div className="bg-white rounded-2xl max-w-md w-full p-8 relative">
         <button
           onClick={onClose}
