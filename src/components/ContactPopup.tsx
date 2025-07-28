@@ -64,7 +64,7 @@ Aguardo retorno para agendar uma reunião!`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
     // Enviar dados para o Google Sheets
-    try {
+ /*   try {
        await fetch('https://script.google.com/macros/s/AKfycbwyIkghzrL6dNk86mTlMepe_2099oGauCz0HrOk07DwQX5mFobod_iJRphMaq-jA-DYIw/exec', {
       method: 'POST',
       headers: {
@@ -75,7 +75,18 @@ Aguardo retorno para agendar uma reunião!`;
     alert('Enviado com Sucesso!');  
     } catch (error) {
     console.error('Erro ao enviar para Google Sheets:', error);
-  }
+  }*/
+
+    try {
+      const response = await axios.post('https://script.google.com/macros/s/AKfycbwyIkghzrL6dNk86mTlMepe_2099oGauCz0HrOk07DwQX5mFobod_iJRphMaq-jA-DYIw/exec', formData);
+      if (response.data.result === 'success') {
+        alert('Dados enviados com sucesso!');
+      } else {
+        alert('Erro ao enviar dados: ' + response.data.message);
+      }
+    } catch (error) {
+      alert('Erro ao enviar dados: ' + error.message);
+    }
 
     // Abrir WhatsApp
     window.open(whatsappUrl, '_blank');
