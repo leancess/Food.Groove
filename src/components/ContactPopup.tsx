@@ -35,10 +35,10 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose }) => {
     }
   };
 
-  //const handleSubmit = (e: React.FormEvent) => {
-  //  e.preventDefault();
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+  //const handleSubmit = async (e: React.FormEvent) => {
+  //  e.preventDefault();
     
     // Validação básica
     if (!formData.name || !formData.phone || !formData.email || !formData.company) {
