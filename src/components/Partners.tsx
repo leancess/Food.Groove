@@ -58,12 +58,12 @@ const Partners = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-336%);
           }
         }
         
         .animate-scroll {
-          animation: scroll 45s linear infinite;
+          animation: scroll 15s linear infinite;
         }
         
         .animate-scroll:hover {
