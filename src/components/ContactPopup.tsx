@@ -99,7 +99,6 @@ Aguardo retorno para agendar uma reunião!`;
     } catch (error) {
       setMensagem('Erro na requisição: ' + error.message);
     }
-  };
     
     // Abrir WhatsApp
     window.open(whatsappUrl, '_blank');
