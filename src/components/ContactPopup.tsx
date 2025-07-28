@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { X, Send } from 'lucide-react';
-import axios from 'axios';
 
 interface ContactPopupProps {
   isOpen: boolean;
@@ -78,17 +77,30 @@ Aguardo retorno para agendar uma reunião!`;
     console.error('Erro ao enviar para Google Sheets:', error);
   }*/
 
+    
     try {
-      const response = await axios.post('https://script.google.com/macros/s/AKfycbwyIkghzrL6dNk86mTlMepe_2099oGauCz0HrOk07DwQX5mFobod_iJRphMaq-jA-DYIw/exec', formData);
-      if (response.data.result === 'success') {
-        alert('Dados enviados com sucesso!');
+      const response = await fetch('https://script.google.com/macros/s/AKfycbwyIkghzrL6dNk86mTlMepe_2099oGauCz0HrOk07DwQX5mFobod_iJRphMaq-jA-DYIw/exec', { 
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.result === 'success') {
+        setMensagem('Dados enviados com sucesso!');
+        setNome('');
+        setEmail('');
       } else {
-        alert('Erro ao enviar dados: ' + response.data.message);
+        setMensagem('Erro ao enviar dados.');
       }
     } catch (error) {
-      alert('Erro ao enviar dados: ' + error.message);
+      setMensagem('Erro na requisição: ' + error.message);
     }
-
+  };
+    
     // Abrir WhatsApp
     window.open(whatsappUrl, '_blank');
     
