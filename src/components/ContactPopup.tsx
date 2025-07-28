@@ -37,8 +37,6 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-  //const handleSubmit = async (e: React.FormEvent) => {
-  //  e.preventDefault();
     
     // Validação básica
     if (!formData.name || !formData.phone || !formData.email || !formData.company) {
@@ -62,26 +60,6 @@ Aguardo retorno para agendar uma reunião!`;
     
     // Criar link do WhatsApp
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
- 
-    /*try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbwyIkghzrL6dNk86mTlMepe_2099oGauCz0HrOk07DwQX5mFobod_iJRphMaq-jA-DYIw/exec', { 
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (result.result === 'success') {
-        alert('Dados enviados com sucesso!');
-      } else {
-        alert('Erro ao enviar dados.');
-      }
-    } catch (error) {
-      alert('Erro na requisição: ' + error.message);
-    }*/
     
     // Abrir WhatsApp
     window.open(whatsappUrl, '_blank');
