@@ -7,18 +7,18 @@ interface ContactPopupProps {
 }
 
 interface FormData {
-  name: string;
-  phone: string;
+  nome: string;
+  telefone: string;
   email: string;
-  company: string;
+  empresa: string;
 }
 
 const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    phone: '',
+    nome: '',
+    telefone: '',
     email: '',
-    company: ''
+    empresa: ''
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,7 +39,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose }) => {
     e.preventDefault();
     
     // Validação básica
-    if (!formData.name || !formData.phone || !formData.email || !formData.company) {
+    if (!formData.nome || !formData.telefone || !formData.email || !formData.empresa) {
       alert('Por favor, preencha todos os campos.');
       return;
     }
@@ -48,10 +48,10 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose }) => {
     const message = `Olá! Gostaria de saber mais sobre os serviços da Groove Marketing.
 
 *Dados do contato:*
-Nome: ${formData.name}
-Telefone: ${formData.phone}
+Nome: ${formData.nome}
+Telefone: ${formData.telefone}
 Email: ${formData.email}
-Empresa: ${formData.company}
+Empresa: ${formData.empresa}
 
 Aguardo retorno para agendar uma reunião!`;
 
@@ -68,10 +68,10 @@ Aguardo retorno para agendar uma reunião!`;
     // Fechar popup e limpar formulário
     onClose();
     setFormData({
-      name: '',
-      phone: '',
+      nome: '',
+      telefone: '',
       email: '',
-      company: ''
+      empresa: ''
     });
   };
 
@@ -108,7 +108,7 @@ Aguardo retorno para agendar uma reunião!`;
               type="text"
               id="name"
               name="name"
-              value={formData.name}
+              value={formData.nome}
               onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
               placeholder="Seu nome completo"
@@ -124,7 +124,7 @@ Aguardo retorno para agendar uma reunião!`;
               type="tel"
               id="phone"
               name="phone"
-              value={formData.phone}
+              value={formData.telefone}
               onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
               placeholder="(11) 99999-9999"
@@ -156,7 +156,7 @@ Aguardo retorno para agendar uma reunião!`;
               type="text"
               id="company"
               name="company"
-              value={formData.company}
+              value={formData.empresa}
               onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
               placeholder="Nome do seu restaurante/empresa"
