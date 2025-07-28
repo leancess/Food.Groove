@@ -35,7 +35,9 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose }) => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  //const handleSubmit = (e: React.FormEvent) => {
+  //  e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validação básica
@@ -60,7 +62,21 @@ Aguardo retorno para agendar uma reunião!`;
     
     // Criar link do WhatsApp
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    
+
+    // Enviar dados para o Google Sheets
+
+try {
+    await fetch('https://script.google.com/macros/s/AKfycbwyIkghzrL6dNk86mTlMepe_2099oGauCz0HrOk07DwQX5mFobod_iJRphMaq-jA-DYIw/exec', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+  } catch (error) {
+    console.error('Erro ao enviar para Google Sheets:', error);
+  }
+
     // Abrir WhatsApp
     window.open(whatsappUrl, '_blank');
     
