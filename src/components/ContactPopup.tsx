@@ -62,6 +62,9 @@ Aguardo retorno para agendar uma reunião!`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     
     // Abrir WhatsApp
+
+    alert(FormData);
+    
     window.open(whatsappUrl, '_blank');
     
     // Fechar popup e limpar formulário
