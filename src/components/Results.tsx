@@ -43,7 +43,7 @@ const Results: React.FC<ResultsProps> = ({ onOpenPopup }) => {
               const IconComponent = result.icon;
               return (
                 <div key={index} className="text-center">
-                  <div className="bg-[#E50E0E]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-[#E50E0E]/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 hover:scale-105 transition-transform">
                     <IconComponent className="h-8 w-8 text-[#E50E0E]" />
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">{result.value}</div>
@@ -67,11 +67,11 @@ const Results: React.FC<ResultsProps> = ({ onOpenPopup }) => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
             {galleryImages.map((image, index) => (
-              <div key={index} className="relative group overflow-hidden rounded-xl">
+              <div key={index} className="relative group overflow-hidden rounded-2xl">
                 <img 
                   src={image} 
                   alt={`Trabalho Groove ${index + 1}`}
-                  className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                  className="w-full h-64 object-cover transition-transform group-hover:scale-110 duration-300"
                   onError={(e) => {
                     console.log(`Erro ao carregar imagem: ${image}`);
                     e.currentTarget.style.display = 'none';
@@ -89,7 +89,7 @@ const Results: React.FC<ResultsProps> = ({ onOpenPopup }) => {
             </p>
             <button 
               onClick={onOpenPopup}
-              className="bg-green-400 hover:bg-green-500 text-black font-semibold px-8 py-4 rounded-full transition-colors inline-block"
+              className="bg-green-400 hover:bg-green-500 text-black font-semibold px-8 py-4 rounded-2xl transition-all duration-300 inline-block hover:scale-105 hover:shadow-lg"
             >
               Quero começar uma campanha
             </button>

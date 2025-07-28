@@ -9,7 +9,7 @@ const CTA: React.FC<CTAProps> = ({ onOpenPopup }) => {
   return (
     <section className="py-20 bg-gradient-to-r from-[#E50E0E] to-[#C40D0D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl">
+        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-shadow duration-300">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               O que você vai ganhar com nosso time de especialistas?
@@ -58,7 +58,7 @@ const CTA: React.FC<CTAProps> = ({ onOpenPopup }) => {
           <div className="text-center">
             <button 
               onClick={onOpenPopup}
-              className="bg-green-400 hover:bg-green-500 text-black font-semibold px-12 py-4 rounded-full transition-colors inline-flex items-center text-lg"
+              className="bg-green-400 hover:bg-green-500 text-black font-semibold px-12 py-4 rounded-2xl transition-all duration-300 inline-flex items-center text-lg hover:scale-105 hover:shadow-lg"
             >
               Quero começar uma reunião
               <ArrowRight className="ml-2 h-5 w-5" />

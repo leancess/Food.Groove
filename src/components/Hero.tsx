@@ -56,14 +56,14 @@ const Hero: React.FC<HeroProps> = ({ onOpenPopup }) => {
           <div className="flex flex-col sm:flex-row gap-6">
             <button 
               onClick={onOpenPopup}
-              className="bg-green-400 hover:bg-green-500 text-black font-bold px-10 py-5 rounded-full transition-all duration-300 flex items-center justify-center group text-lg shadow-2xl hover:shadow-green-400/25"
+              className="bg-green-400 hover:bg-green-500 text-black font-bold px-10 py-5 rounded-2xl transition-all duration-300 flex items-center justify-center group text-lg shadow-2xl hover:shadow-green-400/25 hover:scale-105"
             >
               Quero vender mais
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
             </button>
             <button 
               onClick={scrollToPartners}
-              className="border-3 border-white text-white hover:bg-white hover:text-[#E50E0E] font-bold px-10 py-5 rounded-full transition-all duration-300 text-lg"
+              className="border-2 border-white text-white hover:bg-white hover:text-[#E50E0E] font-bold px-10 py-5 rounded-2xl transition-all duration-300 text-lg hover:scale-105"
             >
               Ver casos de sucesso
             </button>

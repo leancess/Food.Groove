@@ -21,7 +21,7 @@ const Footer = () => {
                 href="https://www.instagram.com/pensegroove/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 p-3 rounded-full hover:bg-[#E50E0E] transition-colors"
+                className="bg-gray-800 p-3 rounded-2xl hover:bg-[#E50E0E] transition-all duration-300 hover:scale-110"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -31,11 +31,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Serviços</h3>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Marketing Digital</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Tráfego Pago</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Social Media</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Identidade Visual</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Consultoria Food</a></li>
+              <li><a href="#" className="hover:text-white transition-colors px-2 py-1 rounded-lg hover:bg-gray-800">Marketing Digital</a></li>
+              <li><a href="#" className="hover:text-white transition-colors px-2 py-1 rounded-lg hover:bg-gray-800">Tráfego Pago</a></li>
+              <li><a href="#" className="hover:text-white transition-colors px-2 py-1 rounded-lg hover:bg-gray-800">Social Media</a></li>
+              <li><a href="#" className="hover:text-white transition-colors px-2 py-1 rounded-lg hover:bg-gray-800">Identidade Visual</a></li>
+              <li><a href="#" className="hover:text-white transition-colors px-2 py-1 rounded-lg hover:bg-gray-800">Consultoria Food</a></li>
             </ul>
           </div>
 

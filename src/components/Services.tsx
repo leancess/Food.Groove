@@ -36,9 +36,9 @@ const Services: React.FC<ServicesProps> = ({ onOpenPopup }) => {
             return (
               <div 
                 key={index} 
-                className="text-center p-6 rounded-xl hover:bg-gray-900 transition-colors group border-2 border-[#E50E0E]"
+                className="text-center p-6 rounded-2xl hover:bg-gray-900 transition-all duration-300 group border-2 border-[#E50E0E] hover:scale-105 hover:shadow-lg"
               >
-                <div className="bg-[#E50E0E]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#E50E0E]/20 transition-colors">
+                <div className="bg-[#E50E0E]/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#E50E0E]/20 transition-colors">
                   <IconComponent className="h-8 w-8 text-[#E50E0E]" />
                 </div>
                 <h3 className="font-semibold text-white mb-2 text-sm md:text-base">{service.title}</h3>
@@ -51,7 +51,7 @@ const Services: React.FC<ServicesProps> = ({ onOpenPopup }) => {
         <div className="text-center mt-12">
           <button 
             onClick={onOpenPopup}
-            className="bg-green-400 hover:bg-green-500 text-black font-semibold px-8 py-4 rounded-full transition-colors inline-block"
+            className="bg-green-400 hover:bg-green-500 text-black font-semibold px-8 py-4 rounded-2xl transition-all duration-300 inline-block hover:scale-105 hover:shadow-lg"
           >
             Quero marcar uma reunião
           </button>

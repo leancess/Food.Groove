@@ -81,10 +81,10 @@ Aguardo retorno para agendar uma reunião!`;
       className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
       onClick={handleOverlayClick}
     >
-      <div className="bg-white rounded-2xl max-w-md w-full p-8 relative">
+      <div className="bg-white rounded-3xl max-w-md w-full p-8 relative shadow-2xl">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors p-2 rounded-xl hover:bg-gray-100"
         >
           <X className="h-6 w-6" />
         </button>
@@ -109,7 +109,7 @@ Aguardo retorno para agendar uma reunião!`;
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
               placeholder="Seu nome completo"
               required
             />
@@ -125,7 +125,7 @@ Aguardo retorno para agendar uma reunião!`;
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
               placeholder="(11) 99999-9999"
               required
             />
@@ -141,7 +141,7 @@ Aguardo retorno para agendar uma reunião!`;
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
               placeholder="seu@email.com"
               required
             />
@@ -157,7 +157,7 @@ Aguardo retorno para agendar uma reunião!`;
               name="company"
               value={formData.company}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
               placeholder="Nome do seu restaurante/empresa"
               required
             />
@@ -165,7 +165,7 @@ Aguardo retorno para agendar uma reunião!`;
 
           <button
             type="submit"
-            className="w-full bg-green-400 hover:bg-green-500 text-black font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center mt-6"
+            className="w-full bg-green-400 hover:bg-green-500 text-black font-semibold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center mt-6 hover:scale-105 hover:shadow-lg"
           >
             <Send className="h-5 w-5 mr-2" />
             Enviar para WhatsApp

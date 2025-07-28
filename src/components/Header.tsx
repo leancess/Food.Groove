@@ -15,12 +15,12 @@ const Header = () => {
             />
           </div>
           <nav className="hidden md:flex space-x-8">
-            <a href="#services" className="text-white hover:text-[#E50E0E] transition-colors">Serviços</a>
-            <a href="#testimonials" className="text-white hover:text-[#E50E0E] transition-colors">Depoimentos</a>
-            <a href="#results" className="text-white hover:text-[#E50E0E] transition-colors">Resultados</a>
-            <a href="#contact" className="text-white hover:text-[#E50E0E] transition-colors">Contato</a>
+            <a href="#services" className="text-white hover:text-[#E50E0E] transition-colors px-4 py-2 rounded-lg hover:bg-gray-800">Serviços</a>
+            <a href="#testimonials" className="text-white hover:text-[#E50E0E] transition-colors px-4 py-2 rounded-lg hover:bg-gray-800">Depoimentos</a>
+            <a href="#results" className="text-white hover:text-[#E50E0E] transition-colors px-4 py-2 rounded-lg hover:bg-gray-800">Resultados</a>
+            <a href="#contact" className="text-white hover:text-[#E50E0E] transition-colors px-4 py-2 rounded-lg hover:bg-gray-800">Contato</a>
           </nav>
-          <button className="md:hidden p-2">
+          <button className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors">
             <Menu className="h-6 w-6 text-white" />
           </button>
         </div>
