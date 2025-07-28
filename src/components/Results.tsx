@@ -1,7 +1,11 @@
 import React from 'react';
 import { TrendingUp, Users, DollarSign, Heart } from 'lucide-react';
 
-const Results = () => {
+interface ResultsProps {
+  onOpenPopup: () => void;
+}
+
+const Results: React.FC<ResultsProps> = ({ onOpenPopup }) => {
   const results = [
     { icon: TrendingUp, value: '300%', label: 'Aumento médio nas vendas' },
     { icon: Users, value: '+50K', label: 'Novos seguidores gerados' },
@@ -83,14 +87,12 @@ const Results = () => {
               Tudo com foco no que <span className="font-bold text-[#E50E0E]">realmente importa</span>: 
               atrair clientes e aumentar seu faturamento
             </p>
-            <a 
-              href="http://bit.ly/36XSkWU" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <button 
+              onClick={onOpenPopup}
               className="bg-green-400 hover:bg-green-500 text-black font-semibold px-8 py-4 rounded-full transition-colors inline-block"
             >
               Quero começar uma campanha
-            </a>
+            </button>
           </div>
         </div>
       </div>

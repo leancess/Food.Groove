@@ -1,7 +1,11 @@
 import React from 'react';
 import { Eye, TrendingUp, Users, Camera, Utensils, Smartphone, MessageCircle, BarChart3 } from 'lucide-react';
 
-const Services = () => {
+interface ServicesProps {
+  onOpenPopup: () => void;
+}
+
+const Services: React.FC<ServicesProps> = ({ onOpenPopup }) => {
   const services = [
     { icon: Eye, title: 'IDENTIDADE VISUAL', description: 'Design profissional para sua marca' },
     { icon: TrendingUp, title: 'TRÁFEGO PAGO', description: 'Campanhas que convertem em vendas' },
@@ -45,14 +49,12 @@ const Services = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a 
-            href="http://bit.ly/36XSkWU" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <button 
+            onClick={onOpenPopup}
             className="bg-green-400 hover:bg-green-500 text-black font-semibold px-8 py-4 rounded-full transition-colors inline-block"
           >
             Quero marcar uma reunião
-          </a>
+          </button>
         </div>
       </div>
     </section>

@@ -1,7 +1,11 @@
 import React from 'react';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
-const CTA = () => {
+interface CTAProps {
+  onOpenPopup: () => void;
+}
+
+const CTA: React.FC<CTAProps> = ({ onOpenPopup }) => {
   return (
     <section className="py-20 bg-gradient-to-r from-[#E50E0E] to-[#C40D0D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,15 +56,13 @@ const CTA = () => {
           </div>
 
           <div className="text-center">
-            <a 
-              href="http://bit.ly/36XSkWU" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <button 
+              onClick={onOpenPopup}
               className="bg-green-400 hover:bg-green-500 text-black font-semibold px-12 py-4 rounded-full transition-colors inline-flex items-center text-lg"
             >
               Quero começar uma reunião
               <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+            </button>
           </div>
         </div>
       </div>
