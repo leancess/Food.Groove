@@ -66,7 +66,7 @@ Aguardo retorno para agendar uma reunião!`;
     // Enviar dados para o Google Sheets
 
 try {
-    await fetch('https://script.google.com/macros/s/AKfycbwyIkghzrL6dNk86mTlMepe_2099oGauCz0HrOk07DwQX5mFobod_iJRphMaq-jA-DYIw/exec', {
+    await fetch('https://script.google.com/macros/s/AKfycbynbVr9bUaWMaydRjBdKanE-2fpxTrUzNP_1Ay4ulzF/dev', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
