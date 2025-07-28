@@ -90,14 +90,12 @@ Aguardo retorno para agendar uma reunião!`;
       const result = await response.json();
 
       if (result.result === 'success') {
-        setMensagem('Dados enviados com sucesso!');
-        setNome('');
-        setEmail('');
+        alert('Dados enviados com sucesso!');
       } else {
-        setMensagem('Erro ao enviar dados.');
+        alert('Erro ao enviar dados.');
       }
     } catch (error) {
-      setMensagem('Erro na requisição: ' + error.message);
+      alert('Erro na requisição: ' + error.message);
     }
     
     // Abrir WhatsApp
