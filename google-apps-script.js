@@ -5,7 +5,7 @@ function doPost(e) {
   try {
     // ID da sua planilha do Google Sheets
     // Substitua pelo ID da sua planilha
-    const SHEET_ID = 'SEU_SHEET_ID_AQUI';
+    const SHEET_ID = '1NC_1o16FqqOjJfXHM4z14FvVdO8hBcWySNWoXZvvPJE';
     
     // Nome da aba da planilha (padrão é "Sheet1")
     const SHEET_NAME = 'Contatos';
