@@ -23,7 +23,7 @@ export const sendToGoogleSheets = async (data: FormData): Promise<boolean> => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
       body: JSON.stringify(data),
       mode: 'no-cors' // Necessário para Google Apps Script
     });
