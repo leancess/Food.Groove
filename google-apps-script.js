@@ -5,10 +5,10 @@ function doPost(e) {
   try {
     // ID da sua planilha do Google Sheets
     // Substitua pelo ID da sua planilha
-    const SHEET_ID = '1NC_1o16FqqOjJfXHM4z14FvVdO8hBcWySNWoXZvvPJE';
+    const SHEET_ID = 'YOUR_ID';
     
     // Nome da aba da planilha (padrão é "Sheet1")
-    const SHEET_NAME = 'Contatos';
+    const SHEET_NAME = 'YOUR_ID';
     
     // Abrir a planilha
     const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
