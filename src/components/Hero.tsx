@@ -23,7 +23,6 @@ const Hero: React.FC<HeroProps> = ({ onOpenPopup }) => {
           className="w-full h-full object-cover"
           style={{
             minWidth: '100%',
-            minHeight: '100%',
             width: '100vw',
             height: '56.25vw', // 16:9 aspect ratio
             minHeight: '100vh',
