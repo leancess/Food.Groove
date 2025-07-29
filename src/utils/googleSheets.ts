@@ -31,7 +31,7 @@ export const sendToGoogleSheets = async (data: FormData): Promise<boolean> => {
     return true;
   } catch (error) {
     console.error('Erro ao enviar dados para Google Sheets:', error);
-    alert('erro ao transmitir dados')
+    alert('erro ao transmitir dados');
     return false;
   }
 };
