@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X, Send } from 'lucide-react';
+import { sendToGoogleSheets } from '../utils/googleSheets';
 
 interface ContactPopupProps {
   isOpen: boolean;
@@ -43,6 +44,15 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose }) => {
       alert('Por favor, preencha todos os campos.');
       return;
     }
+
+    // Enviar dados para Google Sheets
+    sendToGoogleSheets(formData).then(success => {
+      if (success) {
+        console.log('Dados enviados para Google Sheets com sucesso!');
+      } else {
+        console.log('Erro ao enviar dados para Google Sheets');
+      }
+    });
 
     // Criar mensagem para WhatsApp
     const message = `Olá! Gostaria de saber mais sobre os serviços da Groove Marketing.
@@ -107,7 +117,7 @@ Aguardo retorno para agendar uma reunião!`;
             <input
               type="text"
               id="name"
-              name="name"
+              name="nome"
               value={formData.nome}
               onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
@@ -123,7 +133,7 @@ Aguardo retorno para agendar uma reunião!`;
             <input
               type="tel"
               id="phone"
-              name="phone"
+              name="telefone"
               value={formData.telefone}
               onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
@@ -155,7 +165,7 @@ Aguardo retorno para agendar uma reunião!`;
             <input
               type="text"
               id="company"
-              name="company"
+              name="empresa"
               value={formData.empresa}
               onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#E50E0E] focus:border-transparent outline-none transition-all"
