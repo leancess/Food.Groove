@@ -21,7 +21,10 @@ export const sendToGoogleSheets = async (data: FormData): Promise<boolean> => {
 
     const response = await fetch(GOOGLE_SCRIPT_URL, {
       method: 'POST',
-      body: formData,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+      body: JSON.stringify(data),
       mode: 'no-cors' // Necessário para Google Apps Script
     });
 
