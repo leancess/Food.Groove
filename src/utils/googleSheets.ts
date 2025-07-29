@@ -11,7 +11,6 @@ export const sendToGoogleSheets = async (data: FormData): Promise<boolean> => {
     // Você precisará substituir esta URL pela URL do seu Google Apps Script
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzdTbdFUbcXkAy95RvsrMlzfvU8skiFlQGU811I1RvNnh2ycTkVxVzhWum9a4hXP9dXYA/exec';
     
-    
     const formData = new FormData();
     formData.append('nome', data.nome);
     formData.append('telefone', data.telefone);
