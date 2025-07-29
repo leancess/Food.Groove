@@ -9,7 +9,7 @@ export const sendToGoogleSheets = async (data: FormData): Promise<boolean> => {
   try {
     // URL do Google Apps Script Web App
     // Você precisará substituir esta URL pela URL do seu Google Apps Script
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyjNm4xtQNN122RsepcdO5el-baPO71gr7PyZhi2ljNZfm_OkEHEHhIIyLPKDNA8QNvew/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyLZy0KKXdbx0FMB5ANXN_Om7pjfnAeUAiHFzqdIzDYHLWg7gHrjHAeBR4f5hdto08a-g/exec';
     
     const formData = new FormData();
     formData.append('nome', data.nome);
